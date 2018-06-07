@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 
 public class MainFrame extends JFrame {
 	
+	private MainPanel mainPanel;
+	
 	/**
 	 * 
 	 */
@@ -13,10 +15,17 @@ public class MainFrame extends JFrame {
 
 	public MainFrame() {
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setTitle("--Titel einfügen--");
+		this.setTitle("TicTacToe");
 		this.setSize(new Dimension(400,300));
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
+		
+		// Initialisiere MainPanel
+		this.mainPanel = new MainPanel();
+		this.add(this.mainPanel);
+		
+		// Neu Zeichnen
+		this.repaint();
 	}
 
 }
