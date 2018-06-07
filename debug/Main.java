@@ -1,3 +1,5 @@
+package debug;
+import view.MainFrame;
 
 public class Main {
 	
