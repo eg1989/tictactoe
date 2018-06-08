@@ -1,10 +1,12 @@
 package view;
 
 import java.awt.Dimension;
+import java.util.Observable;
+import java.util.Observer;
 
 import javax.swing.JFrame;
 
-public class MainFrame extends JFrame {
+public class MainFrame extends JFrame implements Observer {
 	
 	private MainPanel mainPanel;
 	
@@ -26,6 +28,11 @@ public class MainFrame extends JFrame {
 		
 		// Neu Zeichnen
 		this.repaint();
+	}
+
+	@Override
+	public void update(Observable board, Object board_event) {
+		this.mainPanel.update(board,board_event);
 	}
 
 }
