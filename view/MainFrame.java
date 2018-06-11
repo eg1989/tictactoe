@@ -6,9 +6,12 @@ import java.util.Observer;
 
 import javax.swing.JFrame;
 
+import control.Control;
+
 public class MainFrame extends JFrame implements Observer {
 	
 	private MainPanel mainPanel;
+	private Control control;
 	
 	/**
 	 * 
@@ -28,6 +31,10 @@ public class MainFrame extends JFrame implements Observer {
 		
 		// Neu Zeichnen
 		this.repaint();
+	}
+	
+	public void setControl(Control control) {
+		this.control = control;
 	}
 
 	@Override
